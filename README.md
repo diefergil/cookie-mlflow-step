@@ -5,8 +5,25 @@ Using this template you can quickly generate new steps to be used with MLFlow.
 # Usage
 Run the command:
 
-```
+```bash:
 > cookiecutter [path to this repo] -o [destination directory]
+```
+
+Example:
+
+```bash:
+cookiecutter -f https://github.com/diefergil/cookie-mlflow-step.git -o src
+```
+
+configuration example:
+
+```yaml:
+step_name [step_name]: basic_cleaning
+script_name [run.py]: run.py
+job_type [my_step]: basic_cleaning
+short_description [My step]: This steps cleans the data
+long_description [An example of a step using MLflow and Weights & Biases]: Performs basic cleaning on the data and save the results in Weights & Biases
+parameters [parameter1,parameter2]: parameter1,parameter2,parameter3
 ```
 
 and follow the prompt. The tool will ask for the step name, the script name, the description and so on. It will
